@@ -17,6 +17,7 @@ class MainCell: UITableViewCell {
     }
     
     func setImage(with image: UIImage){
+        cellImage.isHidden = false
         cellImage.image = image
     }
 }

@@ -21,8 +21,9 @@ class ViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         checkForNetworkALert()
+        configureTHelloLabel()
     }
-    
+
     private func configureTableView(){
         mainMenu.dataSource = self
         mainMenu.delegate = self
@@ -37,6 +38,11 @@ class ViewController: UIViewController {
         }
     }
     
+    private func configureTHelloLabel(){
+        let helloGenerator = HelloGenerator()
+        menuLabel.text = helloGenerator.sayHello()
+    }
+    
     private func showNetworkAlert(){
         let alert = UIAlertController(title: "Дэмн как так",
                                       message: "Тырнета нету, аппа может не ворк как надо",
@@ -46,7 +52,6 @@ class ViewController: UIViewController {
                                       handler: { (_) in }))
         self.present(alert, animated: true, completion: nil)
     }
-    
 }
 
 //MARK: - UITableView Delegates
@@ -68,6 +73,5 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             tableView.reloadData()
         }
-        
     }
 }

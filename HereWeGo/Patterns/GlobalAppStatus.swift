@@ -4,6 +4,7 @@
 //
 //  Created by Finesse on 07.02.2023.
 //
+// MARK: - Singleton
 
 import UIKit
 

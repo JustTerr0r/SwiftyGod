@@ -1,16 +1,20 @@
 PODS:
+  - SwiftyGif (5.4.4)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - SwiftyGif
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
+    - SwiftyGif
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  SwiftyGif: 93a1cc87bf3a51916001cf8f3d63835fb64c819f
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 498146c54e9907e9edc889414a32d57ef48fb969
+PODFILE CHECKSUM: 091fd816d0e19df52af748ab341e348ca57bc79a
 
 COCOAPODS: 1.11.3

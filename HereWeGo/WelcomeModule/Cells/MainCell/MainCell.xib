@@ -15,8 +15,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHc-Zn-TVL">
-                        <rect key="frame" x="175.66666666666666" y="11.666666666666664" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="XHc-Zn-TVL">
+                        <rect key="frame" x="176" y="12" width="41.333333333333343" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,6 +34,7 @@
                     <constraint firstItem="XHc-Zn-TVL" firstAttribute="centerX" secondItem="JY3-HM-1S3" secondAttribute="centerX" id="G2p-Z6-dbP"/>
                     <constraint firstItem="HsO-fn-eev" firstAttribute="leading" secondItem="JY3-HM-1S3" secondAttribute="leading" constant="16" id="Jef-0x-Blk"/>
                     <constraint firstItem="HsO-fn-eev" firstAttribute="centerY" secondItem="JY3-HM-1S3" secondAttribute="centerY" id="dQw-t0-Jga"/>
+                    <constraint firstItem="XHc-Zn-TVL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HsO-fn-eev" secondAttribute="trailing" constant="8" id="kgv-DD-voh"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

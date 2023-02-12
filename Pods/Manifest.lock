@@ -1,20 +1,32 @@
 PODS:
+  - KeychainSwift (20.0.0)
+  - MCEmojiPicker (1.1)
   - SwiftyGif (5.4.4)
   - SwiftyJSON (4.3.0)
+  - ValueAnimator (0.6.8)
 
 DEPENDENCIES:
+  - KeychainSwift (~> 20.0)
+  - MCEmojiPicker
   - SwiftyGif
   - SwiftyJSON (~> 4.0)
+  - ValueAnimator
 
 SPEC REPOS:
   trunk:
+    - KeychainSwift
+    - MCEmojiPicker
     - SwiftyGif
     - SwiftyJSON
+    - ValueAnimator
 
 SPEC CHECKSUMS:
+  KeychainSwift: 0ce6a4d13f7228054d1a71bb1b500448fb2ab837
+  MCEmojiPicker: 0f3929ab2bb59626016bf579da979170a0c912a4
   SwiftyGif: 93a1cc87bf3a51916001cf8f3d63835fb64c819f
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  ValueAnimator: b9ed721f3a0fc682ec857fd70dc933b28adb7522
 
-PODFILE CHECKSUM: 091fd816d0e19df52af748ab341e348ca57bc79a
+PODFILE CHECKSUM: 3b57a1507a5e992f67b92e5133dbc7669e9c1970
 
 COCOAPODS: 1.11.3

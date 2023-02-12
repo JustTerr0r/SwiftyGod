@@ -17,3 +17,4 @@ enum MenuItemType {
     case casual
     case withEmoji
 }
+

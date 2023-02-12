@@ -5,7 +5,11 @@
 //  Created by Finesse on 09.02.2023
 //
 
+import Foundation
+
 protocol TutorialPresenterProtocol: AnyObject {
+    func skipTutor()
+    
 }
 
 class TutorialPresenter {
@@ -17,7 +21,13 @@ class TutorialPresenter {
         self.interactor = interactor
         self.router = router
     }
+    
 }
 
 extension TutorialPresenter: TutorialPresenterProtocol {
+    func skipTutor() {
+        router.dismissIt()
+    }
+    
+    
 }

@@ -31,6 +31,7 @@
 		36A909BB299396A90004B676 /* HelloManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A909BA299396A90004B676 /* HelloManager.swift */; };
 		36A909BD2993A3590004B676 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A909BC2993A3590004B676 /* AlertFactory.swift */; };
 		36B2AE8A299954B600349B08 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2AE89299954B600349B08 /* UILabel.swift */; };
+		36B2AE8C299A064D00349B08 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2AE8B299A064D00349B08 /* UIColor.swift */; };
 		36EAA944299672D300DA8866 /* TutorialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36EAA942299672D300DA8866 /* TutorialCollectionViewCell.xib */; };
 		36EAA945299672D300DA8866 /* TutorialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EAA943299672D300DA8866 /* TutorialCollectionViewCell.swift */; };
 		F1E2E2A9C8C8BA3EB13B3907 /* Pods_HereWeGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 253C2653562E3A6FDD662466 /* Pods_HereWeGo.framework */; };
@@ -65,6 +66,7 @@
 		36A909BA299396A90004B676 /* HelloManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloManager.swift; sourceTree = "<group>"; };
 		36A909BC2993A3590004B676 /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 		36B2AE89299954B600349B08 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		36B2AE8B299A064D00349B08 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		36EAA942299672D300DA8866 /* TutorialCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialCollectionViewCell.xib; sourceTree = "<group>"; };
 		36EAA943299672D300DA8866 /* TutorialCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9041E928D47F41ED18568D9 /* Pods-HereWeGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereWeGo.release.xcconfig"; path = "Target Support Files/Pods-HereWeGo/Pods-HereWeGo.release.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				36A909962992A41D0004B676 /* InternetConnectionManager.swift */,
 				36224BFF299646ED008248A4 /* UITableView Extension.swift */,
 				36B2AE89299954B600349B08 /* UILabel.swift */,
+				36B2AE8B299A064D00349B08 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				36A9099D2992A44F0004B676 /* GlobalAppStatus.swift in Sources */,
 				36A90989299292B30004B676 /* MainCell.swift in Sources */,
 				36224BF82995522D008248A4 /* TutorialRouter.swift in Sources */,
+				36B2AE8C299A064D00349B08 /* UIColor.swift in Sources */,
 				36EAA945299672D300DA8866 /* TutorialCollectionViewCell.swift in Sources */,
 				36A9099B2992A41D0004B676 /* SceneDelegate.swift in Sources */,
 				36A909BD2993A3590004B676 /* AlertFactory.swift in Sources */,

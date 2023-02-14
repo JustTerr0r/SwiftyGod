@@ -11,6 +11,9 @@ import ValueAnimator
 class ViewController: UIViewController {
     
     //MARK: - IBOutlets
+    
+    @IBOutlet weak var smallUserpickButton: UIButton!
+    @IBOutlet weak var backgroundViewForSmallLabel: UIView!
     @IBOutlet private weak var userpickLabelSmall: UILabel!
     @IBOutlet private weak var userpickLabelBig: UILabel!
     @IBOutlet private weak var mainMenu: UITableView!
@@ -21,7 +24,7 @@ class ViewController: UIViewController {
 
     let helloGenerator = HelloGenerator() // Entity for generate Hello-word on a 100+ lang
     
-    var userpick = "⭐️"
+    var userpick: String = "⭐️"
         
     //MARK: - VC Life Cycle
     override func viewDidLoad() {
@@ -33,11 +36,11 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         configureTHelloLabel()
+        configureUserpickBackground()
     }
     
     override func viewWillLayoutSubviews() {
         checkForNetworkALert()
- //       setUserpick()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -73,46 +76,61 @@ class ViewController: UIViewController {
         }
     }
     
-    private func configureUserpickSize() {
-  
+    private func configureUserpickBackground() {
+        backgroundViewForSmallLabel.layer.cornerRadius = backgroundViewForSmallLabel.frame.height / 2
+        backgroundViewForSmallLabel.backgroundColor = UIColor("#587f6f")
+        smallUserpickButton.addTarget(self, action: #selector(switchUserpick), for: .touchUpInside)
     }
     
     private func setUserpick() {
+        userpick = defaults.string(forKey: "Userpick") ?? "⭐️"
         let isUserPickBig = defaults.bool(forKey: "isUserPickBig")
         
         if isUserPickBig {
             userpickLabelSmall.isHidden = true
+            backgroundViewForSmallLabel.isHidden = true
             userpickLabelBig.isHidden = false
             userpickLabelBig.font = .systemFont(ofSize: 55)
         } else {
             userpickLabelSmall.isHidden = false
-            userpickLabelBig.isHidden = true
-            userpickLabelBig.font = .systemFont(ofSize: 17)
+            backgroundViewForSmallLabel.isHidden = false
+            userpickLabelBig.font = .systemFont(ofSize: 0) // Hide big label for smooth animate action
         }
 
         userpickLabelBig.text = userpick
         userpickLabelSmall.text = userpick
+        
     }
     
-    private func switchUserpick(isUserpickBig: Bool) {
-        if isUserpickBig {
-            self.userpickLabelBig.isHidden = false
-            let animator = ValueAnimator.animate("some", from: 15, to: 48, duration: 1.0,
-                                                 easing: EaseCircular.easeIn(), onChanged: { p, v in
-                self.userpickLabelBig.font = .systemFont(ofSize: v.value)
+   @objc private func switchUserpick() {
+        let isUserPickBig = !defaults.bool(forKey: "isUserPickBig")
+        defaults.set(isUserPickBig, forKey: "isUserPickBig")
+        defaults.synchronize()
+        
+        animateUserpick(forShow: isUserPickBig)
+        userpickLabelSmall.isHidden = isUserPickBig
+        setUserpick()
+    }
+    
+    private func animateUserpick(forShow: Bool) {
+        
+        let fromValues = forShow ?  [10, 100] : [55, 10]
+        let toValues = forShow ?  [55, 10] : [1, 100]
+         
+        let animation = ValueAnimator.animate(
+            props: ["h", "w"],
+            from: fromValues,
+            to: toValues,
+            duration: 1,
+            easing: EaseSine.easeInOut(),
+            onChanged: { p, v in
+                if p == "h" {
+                    self.userpickLabelBig.font = .systemFont(ofSize: v.value)
+                } else {
+                    self.userpickLabelBig.alpha = v.value
+                }
             })
-            animator.resume()
-        } else {
-            let animator = ValueAnimator.animate("some", from: 48, to: 11, duration: 1.0,
-                                                 easing: EaseCircular.easeIn(), onChanged: { p, v in
-                self.userpickLabelBig.font = .systemFont(ofSize: v.value)
-            })
-            animator.resume()
-            animator.endCallback = {
-                self.userpickLabelBig.isHidden = true
-                self.userpickLabelBig.font = .systemFont(ofSize: 15)
-            }
-        }
+        animation.resume()
     }
     
     private func showNetworkAlert() {
@@ -151,11 +169,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 //        let vc = TutorialModuleBuilder.build()
 //        vc.modalPresentationStyle = .fullScreen
 //        present(vc, animated: true)
-        let isUserPickBig = !defaults.bool(forKey: "isUserPickBig")
-        defaults.set(isUserPickBig, forKey: "isUserPickBig")
-        defaults.synchronize()
-//        setUserpick()
-        switchUserpick(isUserpickBig: isUserPickBig)
+
+        switchUserpick()
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

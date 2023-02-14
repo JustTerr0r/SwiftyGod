@@ -16,7 +16,7 @@
 		1E0F83CE320F1651CB12A8AB1CBD19D9 /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90814287A9B74D7AB1A24CFCF9A5C9AB /* SwiftyGifManager.swift */; };
 		209A7BC08CE92FEE4DF4118B92E79BB3 /* UICollectionReusableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988E4038CC4A249BBFAA636D47D1283 /* UICollectionReusableView+Extension.swift */; };
 		21CAC1EBC79E441099B71B480F98E1CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		25BE0645A50D92CFA53583F09353679C /* MCEmojiPicker-MCEmojiPicker in Resources */ = {isa = PBXBuildFile; fileRef = 5A7DD4CD9DE7CC5B49460871AE3E308B /* MCEmojiPicker-MCEmojiPicker */; };
+		25BE0645A50D92CFA53583F09353679C /* MCEmojiPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A7DD4CD9DE7CC5B49460871AE3E308B /* MCEmojiPicker.bundle */; };
 		27429177964875B8EF1E4FD1CF564E53 /* Pods-HereWeGo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A6CA0331AB6847FF8674225647644A /* Pods-HereWeGo-dummy.m */; };
 		325CCDB295FFA016638075B5D2CEDD5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		374E2D2F22B1CF451117925A4B6A0904 /* Pods-HereWeGo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C5AF49CE61ABFA80077128ECAD7B6A /* Pods-HereWeGo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -170,8 +170,8 @@
 		55AAE7FED02C9A0F5895C49A5D84062E /* MCEmojiPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MCEmojiPickerView.swift; path = Sources/MCEmojiPicker/View/Views/MCEmojiPickerView.swift; sourceTree = "<group>"; };
 		56B3A7CA80232B75B905121F11306A4D /* MCEmojiSkinTonePickerContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MCEmojiSkinTonePickerContainerView.swift; path = Sources/MCEmojiPicker/View/Views/EmojiSkinTonePickerView/MCEmojiSkinTonePickerContainerView.swift; sourceTree = "<group>"; };
 		57DB67E83A145F1ABADA8D94AF102843 /* SwiftyGif-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyGif-dummy.m"; sourceTree = "<group>"; };
-		5A7DD4CD9DE7CC5B49460871AE3E308B /* MCEmojiPicker-MCEmojiPicker */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "MCEmojiPicker-MCEmojiPicker"; path = MCEmojiPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BDADF5B850A786805190CA7C9C2D218 /* Pods-HereWeGo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HereWeGo"; path = Pods_HereWeGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7DD4CD9DE7CC5B49460871AE3E308B /* MCEmojiPicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCEmojiPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDADF5B850A786805190CA7C9C2D218 /* Pods_HereWeGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HereWeGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFD44AF9088679C035749D10441B8EE /* MCEmojiPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MCEmojiPicker.modulemap; sourceTree = "<group>"; };
 		5C5B75352BFA8A854B77F0EC6A912315 /* SwiftyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyJSON-Info.plist"; sourceTree = "<group>"; };
 		5E90F0802C81BB005189AC8A3F2817D8 /* MCEmojiPickerLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MCEmojiPickerLocalizable.strings; path = vi.lproj/MCEmojiPickerLocalizable.strings; sourceTree = "<group>"; };
@@ -219,8 +219,8 @@
 		9608998601FB89A6EF13EE21A13C0008 /* MCEmojiPickerLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MCEmojiPickerLocalizable.strings; path = "zh-Hans.lproj/MCEmojiPickerLocalizable.strings"; sourceTree = "<group>"; };
 		98A6CA0331AB6847FF8674225647644A /* Pods-HereWeGo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HereWeGo-dummy.m"; sourceTree = "<group>"; };
 		9929E4D453CF8D8BC8B592932A7244C1 /* MCEmojiPickerLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MCEmojiPickerLocalizable.strings; path = ja.lproj/MCEmojiPickerLocalizable.strings; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainSwift; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAEEFB95EE53A57F720E8FBA5BF3C31 /* EaseExponential.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EaseExponential.swift; path = Sources/ValueAnimator/Easing/EaseExponential.swift; sourceTree = "<group>"; };
 		A0A4A3218E3CC6974783E8975162F865 /* SwiftyGif-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-prefix.pch"; sourceTree = "<group>"; };
 		A255222501C4903969CAEE1A0E75A637 /* MCEmojiPickerLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MCEmojiPickerLocalizable.strings; path = "pt-PT.lproj/MCEmojiPickerLocalizable.strings"; sourceTree = "<group>"; };
@@ -242,12 +242,12 @@
 		B9CD6C9EC9C95C8EB84A1E17DA132B0A /* MCEmojiPickerLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MCEmojiPickerLocalizable.strings; path = sk.lproj/MCEmojiPickerLocalizable.strings; sourceTree = "<group>"; };
 		BC673826D4E1458985603ECD206645A7 /* MCEmojiPickerLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MCEmojiPickerLocalizable.strings; path = "en-GB.lproj/MCEmojiPickerLocalizable.strings"; sourceTree = "<group>"; };
 		BCDF52DD0BAAEC9CDA3430948C738FC6 /* SwiftyGif.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyGif.modulemap; sourceTree = "<group>"; };
-		BD144F2E8AC819607EF47446FB601067 /* ValueAnimator */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ValueAnimator; path = ValueAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD144F2E8AC819607EF47446FB601067 /* ValueAnimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ValueAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4E0E91FEE55F9E844D8253D77AC3E6 /* MCEmojiPickerLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MCEmojiPickerLocalizable.strings; path = nl.lproj/MCEmojiPickerLocalizable.strings; sourceTree = "<group>"; };
 		BF5A8072C18ADF1AF59E29559028F449 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
 		C190EFB63CE0A8623BA7663F0361E702 /* EaseCircular.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EaseCircular.swift; path = Sources/ValueAnimator/Easing/EaseCircular.swift; sourceTree = "<group>"; };
 		C3F51489E1175430C935F3B0B599826F /* KeychainSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-umbrella.h"; sourceTree = "<group>"; };
-		C4E875BA775F4A207A1C7F63631B8565 /* MCEmojiPicker */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MCEmojiPicker; path = MCEmojiPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4E875BA775F4A207A1C7F63631B8565 /* MCEmojiPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MCEmojiPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C5AF49CE61ABFA80077128ECAD7B6A /* Pods-HereWeGo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HereWeGo-umbrella.h"; sourceTree = "<group>"; };
 		CA2CD1B7D0C7427D6AEA489585A761BF /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		D382135ABE645FC1A0A1277E337476F2 /* Double+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Double+Extension.swift"; path = "Sources/MCEmojiPicker/Common/Extensions/Double+Extension.swift"; sourceTree = "<group>"; };
@@ -332,7 +332,6 @@
 				8AB0E109E552FEE84D7728DD50A37839 /* TegKeychainConstants.swift */,
 				C29C150D6B4313A28ECA0FEA332478B2 /* Support Files */,
 			);
-			name = KeychainSwift;
 			path = KeychainSwift;
 			sourceTree = "<group>";
 		};
@@ -404,7 +403,6 @@
 				B5578D8C3900AD7AC7EC043A5607B429 /* SwiftyJSON.swift */,
 				22F195F60C188BBED42E02AD4B14070E /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -444,7 +442,6 @@
 				BCDBA4B912D47DB62D4684CA0FA1371B /* Resources */,
 				CD0492E63CDFDBA42D78BCF7F8FF57F5 /* Support Files */,
 			);
-			name = MCEmojiPicker;
 			path = MCEmojiPicker;
 			sourceTree = "<group>";
 		};
@@ -483,7 +480,6 @@
 				2C7C1736F0CC751FB6FF2BAB4F93D6B2 /* ValueAnimator.swift */,
 				2F6C40EFC2BB3114162524F3880EE0F4 /* Support Files */,
 			);
-			name = ValueAnimator;
 			path = ValueAnimator;
 			sourceTree = "<group>";
 		};
@@ -505,13 +501,13 @@
 		C8A038EA6E7214F13782F983C49C9CFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift */,
-				C4E875BA775F4A207A1C7F63631B8565 /* MCEmojiPicker */,
-				5A7DD4CD9DE7CC5B49460871AE3E308B /* MCEmojiPicker-MCEmojiPicker */,
-				5BDADF5B850A786805190CA7C9C2D218 /* Pods-HereWeGo */,
+				9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift.framework */,
+				C4E875BA775F4A207A1C7F63631B8565 /* MCEmojiPicker.framework */,
+				5A7DD4CD9DE7CC5B49460871AE3E308B /* MCEmojiPicker.bundle */,
+				5BDADF5B850A786805190CA7C9C2D218 /* Pods_HereWeGo.framework */,
 				7AD67EFB9A7864151301DC2890207AA2 /* SwiftyGif */,
 				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */,
-				BD144F2E8AC819607EF47446FB601067 /* ValueAnimator */,
+				BD144F2E8AC819607EF47446FB601067 /* ValueAnimator.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -575,7 +571,6 @@
 				8C3BE30AC304B84547D48B878E6CDD63 /* UIImageView+SwiftyGif.swift */,
 				20C6F26F72E466FA42BE04EFCED4EDC1 /* Support Files */,
 			);
-			name = SwiftyGif;
 			path = SwiftyGif;
 			sourceTree = "<group>";
 		};
@@ -649,7 +644,7 @@
 			);
 			name = KeychainSwift;
 			productName = KeychainSwift;
-			productReference = 9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift */;
+			productReference = 9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0D5F39FC341979BE00CFA50BF67F8FE8 /* MCEmojiPicker-MCEmojiPicker */ = {
@@ -666,7 +661,7 @@
 			);
 			name = "MCEmojiPicker-MCEmojiPicker";
 			productName = MCEmojiPicker;
-			productReference = 5A7DD4CD9DE7CC5B49460871AE3E308B /* MCEmojiPicker-MCEmojiPicker */;
+			productReference = 5A7DD4CD9DE7CC5B49460871AE3E308B /* MCEmojiPicker.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		15AEBAFA43912F898FC2E1A73025C946 /* SwiftyGif */ = {
@@ -702,7 +697,7 @@
 			);
 			name = ValueAnimator;
 			productName = ValueAnimator;
-			productReference = BD144F2E8AC819607EF47446FB601067 /* ValueAnimator */;
+			productReference = BD144F2E8AC819607EF47446FB601067 /* ValueAnimator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7E606A73AE91EA3DB8B861E12C2E6C28 /* Pods-HereWeGo */ = {
@@ -725,7 +720,7 @@
 			);
 			name = "Pods-HereWeGo";
 			productName = Pods_HereWeGo;
-			productReference = 5BDADF5B850A786805190CA7C9C2D218 /* Pods-HereWeGo */;
+			productReference = 5BDADF5B850A786805190CA7C9C2D218 /* Pods_HereWeGo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D036A9C888B2B93E7063E79B47806DC7 /* MCEmojiPicker */ = {
@@ -744,7 +739,7 @@
 			);
 			name = MCEmojiPicker;
 			productName = MCEmojiPicker;
-			productReference = C4E875BA775F4A207A1C7F63631B8565 /* MCEmojiPicker */;
+			productReference = C4E875BA775F4A207A1C7F63631B8565 /* MCEmojiPicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
@@ -856,7 +851,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25BE0645A50D92CFA53583F09353679C /* MCEmojiPicker-MCEmojiPicker in Resources */,
+				25BE0645A50D92CFA53583F09353679C /* MCEmojiPicker.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

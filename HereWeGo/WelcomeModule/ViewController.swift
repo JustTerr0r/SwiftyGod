@@ -43,8 +43,6 @@ class ViewController: UIViewController {
         checkForNetworkALert()
     }
     
-    
-    
     override func viewDidDisappear(_ animated: Bool) {
         //     navigationController?.navigationBar.isHidden = false
     }

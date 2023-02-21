@@ -14,7 +14,10 @@ final class AppStatus {
     static let shared = AppStatus()
     
     var isOnline: Bool = true
+    var isNetworkAlertShown = false
     var isUserpickSmall: Bool
+    var userpick: String
+    var userpickColor: String
     
     func checkConnection(){
         
@@ -27,7 +30,12 @@ final class AppStatus {
     
     private init() {
         let keychain = KeychainSwift()
+        let defaults = UserDefaults()
         isUserpickSmall = keychain.getBool("isUserpickSmall") ?? true
+        userpick = defaults.string(forKey: "Userpick") ?? "⭐️"
+        userpickColor = defaults.string(forKey: "userpickColor") ?? "#587f6f"
+        
+        print(userpick)
     }
     
     func isAppAlreadyLaunchedOnce()->Bool {
@@ -36,8 +44,10 @@ final class AppStatus {
             if defaults.bool(forKey: "isAppAlreadyLaunchedOnce"){
                 print("App already launched : \(isAppAlreadyLaunchedOnce)")
                 return true
-            }else{
+            } else{
                 defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+                defaults.set("⭐️", forKey: "Userpick")
+                defaults.set("#587f6f", forKey: "userpickColor")
                 print("App launched first time")
                 return false
             }

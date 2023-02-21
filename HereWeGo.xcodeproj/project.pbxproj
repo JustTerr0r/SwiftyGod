@@ -16,6 +16,13 @@
 		36224BFA2995522D008248A4 /* TutorialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36224BF52995522D008248A4 /* TutorialInteractor.swift */; };
 		36224BFE29956CD4008248A4 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36224BFD29956CD4008248A4 /* TutorialViewController.storyboard */; };
 		36224C00299646ED008248A4 /* UITableView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36224BFF299646ED008248A4 /* UITableView Extension.swift */; };
+		366D3BB529A354650005888D /* CustomizeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D3BB029A354650005888D /* CustomizeModuleBuilder.swift */; };
+		366D3BB629A354650005888D /* CustomizePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D3BB129A354650005888D /* CustomizePresenter.swift */; };
+		366D3BB729A354650005888D /* CustomizeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D3BB229A354650005888D /* CustomizeRouter.swift */; };
+		366D3BB829A354650005888D /* CustomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D3BB329A354650005888D /* CustomizeViewController.swift */; };
+		366D3BB929A354650005888D /* CustomizeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D3BB429A354650005888D /* CustomizeInteractor.swift */; };
+		366D3BBB29A3547A0005888D /* Customize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366D3BBA29A3547A0005888D /* Customize.storyboard */; };
+		366D3BBE29A36D880005888D /* UserpickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D3BBD29A36D880005888D /* UserpickView.swift */; };
 		36A9097229928C3F0004B676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9097129928C3F0004B676 /* ViewController.swift */; };
 		36A9097529928C3F0004B676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A9097329928C3F0004B676 /* Main.storyboard */; };
 		36A9097729928C400004B676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A9097629928C400004B676 /* Assets.xcassets */; };
@@ -49,6 +56,13 @@
 		36224BF52995522D008248A4 /* TutorialInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialInteractor.swift; sourceTree = "<group>"; };
 		36224BFD29956CD4008248A4 /* TutorialViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorialViewController.storyboard; sourceTree = "<group>"; };
 		36224BFF299646ED008248A4 /* UITableView Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView Extension.swift"; sourceTree = "<group>"; };
+		366D3BB029A354650005888D /* CustomizeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeModuleBuilder.swift; sourceTree = "<group>"; };
+		366D3BB129A354650005888D /* CustomizePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizePresenter.swift; sourceTree = "<group>"; };
+		366D3BB229A354650005888D /* CustomizeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeRouter.swift; sourceTree = "<group>"; };
+		366D3BB329A354650005888D /* CustomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeViewController.swift; sourceTree = "<group>"; };
+		366D3BB429A354650005888D /* CustomizeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeInteractor.swift; sourceTree = "<group>"; };
+		366D3BBA29A3547A0005888D /* Customize.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customize.storyboard; sourceTree = "<group>"; };
+		366D3BBD29A36D880005888D /* UserpickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserpickView.swift; sourceTree = "<group>"; };
 		36A9096A29928C3F0004B676 /* HereWeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereWeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A9097129928C3F0004B676 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		36A9097429928C3F0004B676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +137,27 @@
 			path = TutorialModule;
 			sourceTree = "<group>";
 		};
+		366D3BAF29A354220005888D /* CustomizeModule */ = {
+			isa = PBXGroup;
+			children = (
+				366D3BB029A354650005888D /* CustomizeModuleBuilder.swift */,
+				366D3BBA29A3547A0005888D /* Customize.storyboard */,
+				366D3BB129A354650005888D /* CustomizePresenter.swift */,
+				366D3BB229A354650005888D /* CustomizeRouter.swift */,
+				366D3BB329A354650005888D /* CustomizeViewController.swift */,
+				366D3BB429A354650005888D /* CustomizeInteractor.swift */,
+			);
+			path = CustomizeModule;
+			sourceTree = "<group>";
+		};
+		366D3BBC29A36D680005888D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				366D3BBD29A36D880005888D /* UserpickView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		36A9096129928C3F0004B676 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +179,7 @@
 		36A9096C29928C3F0004B676 /* HereWeGo */ = {
 			isa = PBXGroup;
 			children = (
+				366D3BAF29A354220005888D /* CustomizeModule */,
 				36A909952992A41D0004B676 /* Application */,
 				36A909A9299364D80004B676 /* Extensions */,
 				36A9098C2992A1440004B676 /* Patterns */,
@@ -157,6 +193,7 @@
 		36A9098229928C6D0004B676 /* WelcomeModule */ = {
 			isa = PBXGroup;
 			children = (
+				366D3BBC29A36D680005888D /* Views */,
 				36224BE8299531E1008248A4 /* Models */,
 				36A90984299290DA0004B676 /* Cells */,
 				36A9097129928C3F0004B676 /* ViewController.swift */,
@@ -304,6 +341,7 @@
 			files = (
 				36EAA944299672D300DA8866 /* TutorialCollectionViewCell.xib in Resources */,
 				36A9097A29928C400004B676 /* LaunchScreen.storyboard in Resources */,
+				366D3BBB29A3547A0005888D /* Customize.storyboard in Resources */,
 				36224BFE29956CD4008248A4 /* TutorialViewController.storyboard in Resources */,
 				36A9097729928C400004B676 /* Assets.xcassets in Resources */,
 				36A909B929937F040004B676 /* hello.json in Resources */,
@@ -373,13 +411,19 @@
 				36A909BB299396A90004B676 /* HelloManager.swift in Sources */,
 				36224BF62995522D008248A4 /* TutorialModuleBuilder.swift in Sources */,
 				36224BF92995522D008248A4 /* TutorialViewController.swift in Sources */,
+				366D3BB729A354650005888D /* CustomizeRouter.swift in Sources */,
+				366D3BB629A354650005888D /* CustomizePresenter.swift in Sources */,
 				36A9099D2992A44F0004B676 /* GlobalAppStatus.swift in Sources */,
 				36A90989299292B30004B676 /* MainCell.swift in Sources */,
+				366D3BB829A354650005888D /* CustomizeViewController.swift in Sources */,
 				36224BF82995522D008248A4 /* TutorialRouter.swift in Sources */,
+				366D3BB529A354650005888D /* CustomizeModuleBuilder.swift in Sources */,
 				36B2AE8C299A064D00349B08 /* UIColor.swift in Sources */,
 				36EAA945299672D300DA8866 /* TutorialCollectionViewCell.swift in Sources */,
 				36A9099B2992A41D0004B676 /* SceneDelegate.swift in Sources */,
+				366D3BB929A354650005888D /* CustomizeInteractor.swift in Sources */,
 				36A909BD2993A3590004B676 /* AlertFactory.swift in Sources */,
+				366D3BBE29A36D880005888D /* UserpickView.swift in Sources */,
 				36224BF72995522D008248A4 /* TutorialPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

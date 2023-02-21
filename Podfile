@@ -9,6 +9,7 @@ pod 'SwiftyGif'
 pod 'MCEmojiPicker'
 pod 'KeychainSwift', '~> 20.0'
 pod 'ValueAnimator'
+pod 'SwiftyUI'
   # Pods for HereWeGo
 
 end

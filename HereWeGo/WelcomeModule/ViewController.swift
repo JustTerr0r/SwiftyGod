@@ -7,25 +7,25 @@
 
 import UIKit
 import ValueAnimator
+import SwiftyUI
 
 class ViewController: UIViewController {
     
     //MARK: - IBOutlets
     
+    @IBOutlet weak var bigUserpickView: UIView!
+    @IBOutlet weak var bigUserpickStackview: UIStackView!
     @IBOutlet weak var smallUserpickButton: UIButton!
     @IBOutlet weak var backgroundViewForSmallLabel: UIView!
     @IBOutlet private weak var userpickLabelSmall: UILabel!
-    @IBOutlet private weak var userpickLabelBig: UILabel!
     @IBOutlet private weak var mainMenu: UITableView!
     @IBOutlet private weak var helloLabel: UILabel!
     
     //MARK: - Variables
     let defaults = UserDefaults.standard
-
+    
     let helloGenerator = HelloGenerator() // Entity for generate Hello-word on a 100+ lang
     
-    var userpick: String = "⭐️"
-        
     //MARK: - VC Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,27 +82,23 @@ class ViewController: UIViewController {
         smallUserpickButton.addTarget(self, action: #selector(switchUserpick), for: .touchUpInside)
     }
     
-    private func setUserpick() {
-        userpick = defaults.string(forKey: "Userpick") ?? "⭐️"
+    func setUserpick() {
         let isUserPickBig = defaults.bool(forKey: "isUserPickBig")
         
         if isUserPickBig {
             userpickLabelSmall.isHidden = true
             backgroundViewForSmallLabel.isHidden = true
-            userpickLabelBig.isHidden = false
-            userpickLabelBig.font = .systemFont(ofSize: 55)
         } else {
             userpickLabelSmall.isHidden = false
             backgroundViewForSmallLabel.isHidden = false
-            userpickLabelBig.font = .systemFont(ofSize: 0) // Hide big label for smooth animate action
         }
-
-        userpickLabelBig.text = userpick
+        
+        guard let userpick = defaults.string(forKey: "Userpick") else {return}
         userpickLabelSmall.text = userpick
         
     }
     
-   @objc private func switchUserpick() {
+    @objc private func switchUserpick() {
         let isUserPickBig = !defaults.bool(forKey: "isUserPickBig")
         defaults.set(isUserPickBig, forKey: "isUserPickBig")
         defaults.synchronize()
@@ -113,27 +109,18 @@ class ViewController: UIViewController {
     }
     
     private func animateUserpick(forShow: Bool) {
-        
-        let fromValues = forShow ?  [10, 100] : [55, 10]
-        let toValues = forShow ?  [55, 10] : [1, 100]
-         
-        let animation = ValueAnimator.animate(
-            props: ["h", "w"],
-            from: fromValues,
-            to: toValues,
-            duration: 1,
-            easing: EaseSine.easeInOut(),
-            onChanged: { p, v in
-                if p == "h" {
-                    self.userpickLabelBig.font = .systemFont(ofSize: v.value)
-                } else {
-                    self.userpickLabelBig.alpha = v.value
-                }
-            })
-        animation.resume()
+        let view = UserpickView(frame: bigUserpickView.frame)
+        bigUserpickView.addSubview(view)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            view.showDown()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                view.showUp()
+            }
+        }
     }
-    
+        
     private func showNetworkAlert() {
+        guard !AppStatus.shared.isNetworkAlertShown else {return}
         let alert = UIAlertController(title: "Дэмн как так",
                                       message: "Тырнета нету, аппа может не ворк как надо",
                                       preferredStyle: UIAlertController.Style.alert)
@@ -141,6 +128,7 @@ class ViewController: UIViewController {
                                       style: .cancel,
                                       handler: { (_) in }))
         self.present(alert, animated: true, completion: nil)
+        AppStatus.shared.isNetworkAlertShown = true
     }
     
     private func reHelloAction() { // Update Hello-word
@@ -166,11 +154,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Tapped")
-//        let vc = TutorialModuleBuilder.build()
-//        vc.modalPresentationStyle = .fullScreen
-//        present(vc, animated: true)
-
-        switchUserpick()
+        //        let vc = TutorialModuleBuilder.build()
+        //        vc.modalPresentationStyle = .fullScreen
+        //        present(vc, animated: true)
+        if indexPath.row == 0 {
+            switchUserpick()
+        } else {
+            let vc = CustomizeModuleBuilder.build(from: self)
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

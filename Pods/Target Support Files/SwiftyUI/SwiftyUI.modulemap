@@ -1,0 +1,6 @@
+framework module SwiftyUI {
+  umbrella header "SwiftyUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

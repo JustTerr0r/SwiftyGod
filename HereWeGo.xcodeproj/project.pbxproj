@@ -23,6 +23,8 @@
 		366D3BB929A354650005888D /* CustomizeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D3BB429A354650005888D /* CustomizeInteractor.swift */; };
 		366D3BBB29A3547A0005888D /* Customize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366D3BBA29A3547A0005888D /* Customize.storyboard */; };
 		366D3BBE29A36D880005888D /* UserpickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D3BBD29A36D880005888D /* UserpickView.swift */; };
+		366D3BC329ABB55C0005888D /* ColorPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D3BC129ABB55C0005888D /* ColorPickerCell.swift */; };
+		366D3BC429ABB55C0005888D /* ColorPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366D3BC229ABB55C0005888D /* ColorPickerCell.xib */; };
 		36A9097229928C3F0004B676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9097129928C3F0004B676 /* ViewController.swift */; };
 		36A9097529928C3F0004B676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A9097329928C3F0004B676 /* Main.storyboard */; };
 		36A9097729928C400004B676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A9097629928C400004B676 /* Assets.xcassets */; };
@@ -63,6 +65,8 @@
 		366D3BB429A354650005888D /* CustomizeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeInteractor.swift; sourceTree = "<group>"; };
 		366D3BBA29A3547A0005888D /* Customize.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customize.storyboard; sourceTree = "<group>"; };
 		366D3BBD29A36D880005888D /* UserpickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserpickView.swift; sourceTree = "<group>"; };
+		366D3BC129ABB55C0005888D /* ColorPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerCell.swift; sourceTree = "<group>"; };
+		366D3BC229ABB55C0005888D /* ColorPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerCell.xib; sourceTree = "<group>"; };
 		36A9096A29928C3F0004B676 /* HereWeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereWeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A9097129928C3F0004B676 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		36A9097429928C3F0004B676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 		366D3BAF29A354220005888D /* CustomizeModule */ = {
 			isa = PBXGroup;
 			children = (
+				366D3BBF29ABB5210005888D /* Entity */,
 				366D3BB029A354650005888D /* CustomizeModuleBuilder.swift */,
 				366D3BBA29A3547A0005888D /* Customize.storyboard */,
 				366D3BB129A354650005888D /* CustomizePresenter.swift */,
@@ -156,6 +161,23 @@
 				366D3BBD29A36D880005888D /* UserpickView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		366D3BBF29ABB5210005888D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				366D3BC029ABB5290005888D /* Cells */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		366D3BC029ABB5290005888D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				366D3BC129ABB55C0005888D /* ColorPickerCell.swift */,
+				366D3BC229ABB55C0005888D /* ColorPickerCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		36A9096129928C3F0004B676 = {
@@ -340,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36EAA944299672D300DA8866 /* TutorialCollectionViewCell.xib in Resources */,
+				366D3BC429ABB55C0005888D /* ColorPickerCell.xib in Resources */,
 				36A9097A29928C400004B676 /* LaunchScreen.storyboard in Resources */,
 				366D3BBB29A3547A0005888D /* Customize.storyboard in Resources */,
 				36224BFE29956CD4008248A4 /* TutorialViewController.storyboard in Resources */,
@@ -416,6 +439,7 @@
 				36A9099D2992A44F0004B676 /* GlobalAppStatus.swift in Sources */,
 				36A90989299292B30004B676 /* MainCell.swift in Sources */,
 				366D3BB829A354650005888D /* CustomizeViewController.swift in Sources */,
+				366D3BC329ABB55C0005888D /* ColorPickerCell.swift in Sources */,
 				36224BF82995522D008248A4 /* TutorialRouter.swift in Sources */,
 				366D3BB529A354650005888D /* CustomizeModuleBuilder.swift in Sources */,
 				36B2AE8C299A064D00349B08 /* UIColor.swift in Sources */,

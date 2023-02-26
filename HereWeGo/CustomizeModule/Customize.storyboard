@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,38 +18,93 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKu-Cb-e9P">
-                                <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
+                                <rect key="frame" x="138" y="408.66666666666669" width="117" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Select emoji"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSq-90-lEJ">
                                 <rect key="frame" x="168" y="791" width="57" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Skip"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyg-W3-rg8" customClass="UserpickView" customModule="HereWeGo" customModuleProvider="target">
+                                <rect key="frame" x="107" y="174.66666666666663" width="179" height="179"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gyg-W3-rg8" secondAttribute="height" multiplier="1:1" id="Akf-SW-iDX"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q8g-RS-FzZ">
+                                <rect key="frame" x="4" y="513" width="385" height="234"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="5ob-vb-7K0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="vuC-Fk-Lvg">
+                                        <rect key="frame" x="0.0" y="53" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="odM-Wl-fat">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ju-bB-122">
+                                <rect key="frame" x="268.33333333333331" y="470" width="108.66666666666669" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Randomize"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrr-fH-ANj">
+                                <rect key="frame" x="16.000000000000007" y="470" width="96.666666666666686" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="JoJomize"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="q8g-RS-FzZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="4" id="1rQ-NS-yNl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7Ju-bB-122" secondAttribute="trailing" constant="16" id="1uX-6x-nzq"/>
+                            <constraint firstItem="vrr-fH-ANj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6Mw-xv-9hz"/>
                             <constraint firstItem="gKu-Cb-e9P" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="9lS-8C-DTo"/>
+                            <constraint firstItem="q8g-RS-FzZ" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.274648" id="G5L-vI-SAl"/>
+                            <constraint firstItem="Gyg-W3-rg8" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.210094" id="Gkf-SJ-tPj"/>
+                            <constraint firstItem="q8g-RS-FzZ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-4" id="HFs-9B-f5v"/>
                             <constraint firstItem="SSq-90-lEJ" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="8" id="Nck-5W-BxL"/>
+                            <constraint firstItem="SSq-90-lEJ" firstAttribute="top" secondItem="q8g-RS-FzZ" secondAttribute="bottom" constant="44" id="VZM-PK-4Kh"/>
+                            <constraint firstItem="q8g-RS-FzZ" firstAttribute="top" secondItem="7Ju-bB-122" secondAttribute="bottom" constant="8" symbolic="YES" id="Z0m-iw-Y2f"/>
                             <constraint firstItem="SSq-90-lEJ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Z4l-th-On1"/>
+                            <constraint firstItem="Gyg-W3-rg8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="dlB-qx-eXb"/>
+                            <constraint firstItem="gKu-Cb-e9P" firstAttribute="top" secondItem="Gyg-W3-rg8" secondAttribute="bottom" constant="55" id="duF-SB-vqU"/>
+                            <constraint firstItem="q8g-RS-FzZ" firstAttribute="top" secondItem="vrr-fH-ANj" secondAttribute="bottom" constant="8" symbolic="YES" id="hcJ-Ld-LYB"/>
                             <constraint firstItem="gKu-Cb-e9P" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kEa-T5-QQ3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundColorPickerCollection" destination="q8g-RS-FzZ" id="EJF-Ye-OLs"/>
                         <outlet property="cancelButton" destination="SSq-90-lEJ" id="rOi-7R-ufk"/>
+                        <outlet property="defaultColorsButton" destination="vrr-fH-ANj" id="Bb7-0Y-a1b"/>
+                        <outlet property="randomizeColorsButton" destination="7Ju-bB-122" id="lJ8-sa-9gH"/>
                         <outlet property="showButton" destination="gKu-Cb-e9P" id="5pX-a9-fBH"/>
+                        <outlet property="userpickView" destination="Gyg-W3-rg8" id="H8A-rI-Aja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="4"/>
+            <point key="canvasLocation" x="3.8167938931297707" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

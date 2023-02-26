@@ -78,7 +78,7 @@ class ViewController: UIViewController {
     
     private func configureUserpickBackground() {
         backgroundViewForSmallLabel.layer.cornerRadius = backgroundViewForSmallLabel.frame.height / 2
-        backgroundViewForSmallLabel.backgroundColor = UIColor("#587f6f")
+        backgroundViewForSmallLabel.backgroundColor = UIColor("\(AppStatus.shared.userpickColor)")
         smallUserpickButton.addTarget(self, action: #selector(switchUserpick), for: .touchUpInside)
     }
     
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         userpickLabelSmall.isHidden = isUserPickBig
         setUserpick()
     }
-    
+
     private func animateUserpick(forShow: Bool) {
         let view = UserpickView(frame: bigUserpickView.frame)
         bigUserpickView.addSubview(view)

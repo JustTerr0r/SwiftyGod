@@ -18,6 +18,8 @@ final class AppStatus {
     var isUserpickSmall: Bool
     var userpick: String
     var userpickColor: String
+    let defaults = UserDefaults()
+
     
     func checkConnection(){
         
@@ -30,12 +32,9 @@ final class AppStatus {
     
     private init() {
         let keychain = KeychainSwift()
-        let defaults = UserDefaults()
         isUserpickSmall = keychain.getBool("isUserpickSmall") ?? true
         userpick = defaults.string(forKey: "Userpick") ?? "⭐️"
         userpickColor = defaults.string(forKey: "userpickColor") ?? "#587f6f"
-        
-        print(userpick)
     }
     
     func isAppAlreadyLaunchedOnce()->Bool {
@@ -45,11 +44,27 @@ final class AppStatus {
                 print("App already launched : \(isAppAlreadyLaunchedOnce)")
                 return true
             } else{
-                defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
-                defaults.set("⭐️", forKey: "Userpick")
-                defaults.set("#587f6f", forKey: "userpickColor")
+                setDefaultCustomize(defaults: defaults)
                 print("App launched first time")
                 return false
             }
         }
+    
+    func getUserpick() -> String {
+        let defaults = UserDefaults()
+        userpick = defaults.string(forKey: "Userpick") ?? "⭐️"
+        return userpick
+    }
+    
+    func setUserpickColor(color: UIColor) {
+        defaults.set(color.hexString, forKey: "userpickColor")
+        defaults.synchronize()
+        userpickColor = color.hexString ?? "#587f6f"
+    }
+    
+    private func setDefaultCustomize(defaults: UserDefaults){
+        defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+        defaults.set("⭐️", forKey: "Userpick")
+        defaults.set("#587f6f", forKey: "userpickColor")
+    }
 }

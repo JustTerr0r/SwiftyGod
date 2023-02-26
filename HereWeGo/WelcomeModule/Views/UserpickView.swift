@@ -22,15 +22,20 @@ class UserpickView: UIView {
     */
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print("ОГО Я ЗАИНИТИЛСЯ")
-        configureUsernameView()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder aDecoder: NSCoder) {
+       super.init(coder: aDecoder)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configureUsernameView()
+
     }
     
     func showDown() {
+   //     setBackgroundConstrain(active: false)
         let center = self.frame.origin
         let animator = ValueAnimator.animate("some", from: backRoundedView.frame.height, to: 0, duration: 1.0,
                                              easing: EaseCircular.easeIn(),
@@ -49,29 +54,42 @@ class UserpickView: UIView {
             self.backRoundedView.frame = CGRect(x: center.x, y: center.y, width: v.cg, height: v.cg)
             self.usernameLabel.font = .systemFont(ofSize: v.cg * 0.78)
         })
+  //      setBackgroundConstrain(active: true)
         animator.resume()
     }
     
-    private func configureUsernameView() {
+    func configureUsernameView() {
+        userpickEmoji = AppStatus.shared.getUserpick()
         setBackground()
         setUserpick()
     }
     
     private func setBackground() {
+        backgroundColor = .clear
         backRoundedView.frame = self.frame
         backRoundedView.layer.cornerRadius = backRoundedView.frame.height / 2
         backRoundedView.backgroundColor = UIColor(AppStatus.shared.userpickColor)
-        self.addSubview(backRoundedView)
-        
+        self.insertSubview(backRoundedView, at: 0)
+        backRoundedView.frame = self.frame
+        setBackgroundConstrain(active: true)
     }
     
     private func setUserpick() {
         usernameLabel.text = AppStatus.shared.userpick
-        usernameLabel.font = UIFont.systemFont(ofSize: backRoundedView.frame.height * 0.78)
+        usernameLabel.font = UIFont.systemFont(ofSize: backRoundedView.frame.height * 0.7)
         usernameLabel.textAlignment = .center
-        backRoundedView.addSubview(usernameLabel)
+        self.addSubview(usernameLabel)
         usernameLabel.translatesAutoresizingMaskIntoConstraints = false
-        usernameLabel.centerXAnchor.constraint(equalTo: backRoundedView.centerXAnchor).isActive = true
-        usernameLabel.centerYAnchor.constraint(equalTo: backRoundedView.centerYAnchor).isActive = true
+        usernameLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        usernameLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+    }
+    
+    private func setBackgroundConstrain(active: Bool){
+        backRoundedView.translatesAutoresizingMaskIntoConstraints = !active
+        backRoundedView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = active
+        backRoundedView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = active
+        backRoundedView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = active
+        backRoundedView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = active
+
     }
 }

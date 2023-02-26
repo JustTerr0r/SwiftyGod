@@ -10,6 +10,8 @@ import MCEmojiPicker
 
 protocol CustomizePresenterProtocol: AnyObject {
     func cancelAction()
+    func getColors() -> [UIColor]
+    func getJoJoColors() -> [UIColor]
 }
 
 class CustomizePresenter {
@@ -30,7 +32,13 @@ class CustomizePresenter {
 }
 
 extension CustomizePresenter: CustomizePresenterProtocol {
-
+    func getColors() -> [UIColor] {
+        return interactor.generateColors()
+    }
+    
+    func getJoJoColors() -> [UIColor] {
+        return interactor.getJoJoColors()
+    }
     
     func cancelAction(){
         router.dismissIt()
